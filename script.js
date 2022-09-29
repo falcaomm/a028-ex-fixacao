@@ -8,7 +8,11 @@ function adicionaItem(event) {
 
     novoItem.classList.add("item")
 
-    novoItem.setAttribute("onclick", "removeItem(event)")
+    // novoItem.setAttribute("onclick", "removeItem(event)")
+
+    novoItem.addEventListener("click", removeItem)
+    //estudar isso aqui!!
+
     container.insertAdjacentElement("beforeend", novoItem)
 
     event.preventDefault()
